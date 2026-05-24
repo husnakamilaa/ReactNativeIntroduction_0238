@@ -1,7 +1,17 @@
-import { Link, useRouter } from "expo-router";
-import { useEffect, useState } from "react";
-import { StyleSheet, Text, TextInput, View, Alert, KeyboardAvoidingView, Platform, SafeAreaView, TouchableOpacity } from "react-native";
-import { Navbar } from "../components/navbar";
+import { useRouter } from "expo-router";
+import { useState } from "react";
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+// import { Navbar } from "../components/navbar";
 import { COLORS, globalStyles } from "../style";
 
 export default function Index() {
@@ -21,7 +31,7 @@ export default function Index() {
   };
   return (
     <SafeAreaView style={globalStyles.screen}>
-      <Navbar title="index" />
+      {/* <Navbar title="Login" /> */}
 
       <KeyboardAvoidingView
         style={styles.content}
@@ -57,7 +67,11 @@ export default function Index() {
             />
           </View>
 
-          <TouchableOpacity style={globalStyles.btnPrimary} onPress={handleSubmit} activeOpacity={0.85}>
+          <TouchableOpacity
+            style={globalStyles.btnPrimary}
+            onPress={handleSubmit}
+            activeOpacity={0.85}
+          >
             <Text style={globalStyles.btnPrimaryText}>Login</Text>
           </TouchableOpacity>
         </View>
@@ -90,11 +104,17 @@ const styles = StyleSheet.create({
   loginCard: { paddingHorizontal: 20, paddingVertical: 24 },
   bottomBar: { paddingHorizontal: 20, paddingBottom: 16 },
   menuBtn: {
-    width: 40, height: 40, borderRadius: 8,
+    width: 40,
+    height: 40,
+    borderRadius: 8,
     backgroundColor: COLORS.white,
-    alignItems: "center", justifyContent: "center",
-    shadowColor: "#000", shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1, shadowRadius: 4, elevation: 2,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
   menuIcon: { fontSize: 18, color: COLORS.textDark, fontWeight: "600" },
   // container: {
