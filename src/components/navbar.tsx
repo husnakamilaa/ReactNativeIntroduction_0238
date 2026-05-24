@@ -52,3 +52,26 @@ export function BottomNav({ activeIndex = 0 }: BottomNavProps) {
     </View>
   );
 }
+
+
+const styles = StyleSheet.create({
+  navbar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: COLORS.background,
+  },
+  row: { flexDirection: "row", alignItems: "center", gap: 8 },
+  backBtn: {},
+  backArrow: { fontSize: 20, color: COLORS.textDark, fontWeight: "600" },
+  navTitle: { fontSize: 18, fontWeight: "600", color: COLORS.textDark },
+  avatar: { width: 36, height: 36, borderRadius: 18 },
+  settingsBtn: {
+    width: 36, height: 36, borderRadius: 18,
+    backgroundColor: "#E5E7EB",
+    alignItems: "center", justifyContent: "center",
+  },
+  settingsIcon: { fontSize: 18, color: COLORS.textGray },
+});
