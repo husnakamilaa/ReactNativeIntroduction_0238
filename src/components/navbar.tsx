@@ -37,4 +37,4 @@ const TABS = [
   { label: "Profile" },
 ];
 
-
+type BottomNavProps = { activeIndex?: number };
