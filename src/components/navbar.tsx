@@ -38,3 +38,17 @@ const TABS = [
 ];
 
 type BottomNavProps = { activeIndex?: number };
+
+export function BottomNav({ activeIndex = 0 }: BottomNavProps) {
+  return (
+    <View style={globalStyles.bottomNav}>
+      {TABS.map((tab, i) => (
+        <TouchableOpacity key={i} style={globalStyles.bottomNavItem}>
+          <Text style={i === activeIndex ? globalStyles.bottomNavLabelActive : globalStyles.bottomNavLabel}>
+            {tab.label}
+          </Text>
+        </TouchableOpacity>
+      ))}
+    </View>
+  );
+}
