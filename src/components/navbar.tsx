@@ -30,3 +30,11 @@ export function Navbar({ title, showBack = false, avatarUri }: NavbarProps) {
   );
 }
 
+const TABS = [
+  { label: "Home" },
+  { label: "Flights" },
+  { label: "Hotels" },
+  { label: "Profile" },
+];
+
+
