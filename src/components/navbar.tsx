@@ -8,3 +8,25 @@ type NavbarProps = {
   avatarUri?: string;
 };
 
+export function Navbar({ title, showBack = false, avatarUri }: NavbarProps) {
+  const router = useRouter();
+  return (
+    <View style={styles.navbar}>
+      <View style={styles.row}>
+        {showBack && (
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Text style={styles.backArrow}>←</Text>
+          </TouchableOpacity>
+        )}
+        <Text style={styles.navTitle}>{title}</Text>
+      </View>
+      <View style={styles.row}>
+        {avatarUri && <Image source={{ uri: avatarUri }} style={styles.avatar} />}
+        <TouchableOpacity style={styles.settingsBtn}>
+          <Text style={styles.settingsIcon}>⚙</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
