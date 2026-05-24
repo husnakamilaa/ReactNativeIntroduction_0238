@@ -83,9 +83,23 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+  content: { flex: 1, justifyContent: "center", paddingHorizontal: 24 },
+  welcomeSection: { marginBottom: 28, paddingHorizontal: 4 },
+  welcomeTitle: { fontSize: 28, fontWeight: "700", color: COLORS.primary },
+  welcomeSubtitle: { fontSize: 14, color: COLORS.textGray, marginTop: 4 },
+  loginCard: { paddingHorizontal: 20, paddingVertical: 24 },
+  bottomBar: { paddingHorizontal: 20, paddingBottom: 16 },
+  menuBtn: {
+    width: 40, height: 40, borderRadius: 8,
+    backgroundColor: COLORS.white,
+    alignItems: "center", justifyContent: "center",
+    shadowColor: "#000", shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1, shadowRadius: 4, elevation: 2,
   },
+  menuIcon: { fontSize: 18, color: COLORS.textDark, fontWeight: "600" },
+  // container: {
+  //   flex: 1,
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
 });
